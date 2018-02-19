@@ -19,6 +19,10 @@ class Playlist {
       this.isPlaying = false
     }
   }
+
+  previous() {
+    this.currentMediaPosition--
+  }
 }
 
 export default Playlist

@@ -16,12 +16,22 @@ describe('Playlist', () => {
       })
     })
 
-    it('moves from ther first to the second', () => {
+    it('moves from the first to the second', () => {
       expect(playlist.current.name).toBe('Sweater Weather')
 
       playlist.next()
 
       expect(playlist.current.name).toBe('Numb')
+    })
+
+    it('moves from the second to the first', () => {
+      playlist.next()
+
+      expect(playlist.current.name).toBe('Numb')
+
+      playlist.previous()
+
+      expect(playlist.current.name).toBe('Sweater Weather')
     })
 
     it('goes to the first media and pause after last song', () => {
